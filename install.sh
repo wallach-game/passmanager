@@ -1,8 +1,8 @@
 echo "picoooo"
 if [ -d ~/.shortcuts ]; then
-    ##echo "Directory exists"
+    echo "Directory exists"
 else
-    ##mkdir -p ~/.shortcuts
+    mkdir -p ~/.shortcuts
 fi
 
 pkg install -y git 
