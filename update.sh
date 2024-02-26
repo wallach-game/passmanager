@@ -1,3 +1,6 @@
+
+exec &>log.txt
+
 cd ~
 cd passmanager 
 git checkout .
