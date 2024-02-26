@@ -1,4 +1,5 @@
 cd ~
+##mrdko
 cd passmanager 
 git checkout .
 git pull -v 
