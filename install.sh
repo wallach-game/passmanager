@@ -33,5 +33,12 @@ draw_progress_bar 7 10
 cd ~
 git clone https://github.com/wallach-game/passmanager.git
 draw_progress_bar 10 10
+cd ~
+cd passmanager 
+chmod +x *.sh
+mkdir ~/.shortcuts/passmanager
+cp *.sh ~/.shortcuts/passmanager
+
+
 echo "installation complete"
 ##
