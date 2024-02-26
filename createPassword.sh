@@ -4,14 +4,12 @@ option=$(echo "$dialog1" | jq -r ".index" )
 
 
 if [ "$option" = "0" ]; then
-    echo "gene"
+    testPassword=$(openssl rand -base64 8)
 else
-    echo "typo"
+    testPassword=$(termux-dialog text -t "Enter password" )
 fi
 
-
-testPassword="testPassword"
-testUsername="testUsername"
+testUsername=$(termux-dialog text -t "Enter account name" )
 
 pin=$(termux-dialog text -t "Enter PIN:" -n -p )
 
