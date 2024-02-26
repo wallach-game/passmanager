@@ -1,13 +1,13 @@
 echo "picoooo"
-
-##if [ -d ~/.shortcuts ]; then
+if [ -d ~/.shortcuts ]; then
     ##echo "Directory exists"
-##else
+else
     ##mkdir -p ~/.shortcuts
-##fi
+fi
 
-##pkg install -y git 
-##pkg install -y jq
+pkg install -y git 
+pkg install -y jq
 
-##cd ~
-##git clone https://github.com/wallach-game/passmanager.git
+cd ~
+git clone https://github.com/wallach-game/passmanager.git
+##
