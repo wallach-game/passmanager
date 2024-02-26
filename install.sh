@@ -38,7 +38,7 @@ cd passmanager
 chmod +x *.sh
 mkdir ~/.shortcuts/passmanager
 cp *.sh ~/.shortcuts/passmanager
-
+mkdir ./storage/
 
 echo "installation complete"
 ##
