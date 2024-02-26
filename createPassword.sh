@@ -18,7 +18,7 @@ encryption_key=$(echo -n "$pin" | openssl enc -aes-256-cbc -pass pass:"$passphra
 encrypted_string=$(echo -n "$testPassword" | openssl enc -aes-256-cbc -pass "pass:$encryption_key" -nosalt -base64)
 
 cd ~/passmanager/storage/
-echo "$encrypted_string"
+echo "$encrypted_string" > "$testUsername"
 
 sleep 5
 ##
