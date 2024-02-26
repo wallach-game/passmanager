@@ -1,13 +1,8 @@
-
-exec &>log.txt
-
 cd ~
 cd passmanager 
-git checkout 
+git checkout .
 git pull -v 
 chmod +x *.sh
-cd ~
-rm ~/.shortcuts/passmanager -drfv
+rm ~/.shortcuts/passmanager/*.sh -fv
 mkdir ~/.shortcuts/passmanager
-cd passmanager 
 cp *.sh ~/.shortcuts/passmanager
