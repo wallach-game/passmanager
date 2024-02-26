@@ -17,7 +17,8 @@ pin=$(termux-dialog text -t "Enter PIN:" -n -p )
 encryption_key=$(echo -n "$pin" | openssl enc -aes-256-cbc -pass pass:"$passphrase" -nosalt -base64)
 encrypted_string=$(echo -n "$testPassword" | openssl enc -aes-256-cbc -pass "pass:$encryption_key" -nosalt -base64)
 
-echo "$encrypted_string" > "~/passmanager/storage/$testUsername"
+cd ~/passmanager/storage/
+echo "$encrypted_string" > "$testUsername"
 
 sleep 5
 ##
