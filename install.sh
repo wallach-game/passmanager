@@ -3,4 +3,10 @@ if [ -d ~/.shortcuts]; then
 else
     mkdir ~/.shortcuts
 
-##
+pkg install git 
+pkg install jq
+cd ~
+git clone https://github.com/wallach-game/passmanager.git
+
+
+
