@@ -9,7 +9,7 @@ else
     testPassword=$(termux-dialog text -t "Enter password" )
 fi
 
-testUsername=$(termux-dialog text -t "Enter account name" )
+testUsername=$(termux-dialog -t "Enter account name" )
 
 pin=$(termux-dialog text -t "Enter PIN:" -n -p )
 
