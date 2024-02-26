@@ -3,5 +3,4 @@ if [ -d ~/.shortcuts]; then
 else
     mkdir ~/.shortcuts
 
-
-    
+##
