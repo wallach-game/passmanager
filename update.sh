@@ -1,5 +1,6 @@
 cd ~
 cd passmanager 
+git checkout .
 git pull
 chmod +x *.sh
 cd ~
