@@ -1,6 +1,7 @@
-dialog1=$(termux-dialog radio -t "Saving a new password" -v generate,"type password" )
-option=$(echo "$dialog1" | jq -r ".index" )
-
+##dialog1=$(termux-dialog radio -t "Saving a new password" -v generate,"type password"  )
+##option=$(echo "$dialog1" | jq -r ".index" )
+ 
+option=$(termux-dialog radio -t "Saving a new password" -v generate,"type password" | jq -r ".index" )
 
 
 if [ "$option" = "0" ]; then
