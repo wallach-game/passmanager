@@ -1,5 +1,5 @@
 termux-toast -s "Saving a new password"
-dialog1=$(termux-dialog radio -t "Choose option" -v generate, "type password")
+dialog1=$(termux-dialog radio -t "Choose option" -v generate, type_password )
 option=echo "$dialog1" | jq -r ".index"
 echo "$option"
 sleep 10
