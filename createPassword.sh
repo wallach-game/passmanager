@@ -3,7 +3,7 @@ option=$(echo "$dialog1" | jq -r ".index" )
 
 
 
-if [ "$option" == "0" ]; then
+if [ "$option" = "0" ]; then
     echo "gene"
 else
     echo "typo"
