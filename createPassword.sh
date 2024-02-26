@@ -7,12 +7,12 @@ option=$(termux-dialog radio -t "Saving a new password" -v generate,"type passwo
 if [ "$option" = "0" ]; then
     testPassword=$(openssl rand -base64 8)
 else
-    testPassword=$(termux-dialog text -t "Enter password" )
+    testPassword=$(termux-dialog text -t "Enter password" | jq -r ".text" )
 fi
 ##testUsername=$(termux-dialog -t "Enter account name" )
 testUsername=$(termux-dialog -t "Enter account name" | jq -r ".text")
 
-pin=$(termux-dialog text -t "Enter PIN:" -n -p )
+pin=$(termux-dialog text -t "Enter PIN:" -n -p | jq -r ".text")
 
 # Generate an encryption key using the passphrase
 encryption_key=$(echo -n "$pin" | openssl enc -aes-256-cbc -pass pass:"$passphrase" -nosalt -base64)
