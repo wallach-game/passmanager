@@ -8,9 +8,8 @@ if [ "$option" = "0" ]; then
 else
     testPassword=$(termux-dialog text -t "Enter password" )
 fi
-termux-dialog -t "Enter account name" 
 ##testUsername=$(termux-dialog -t "Enter account name" )
-testUsername=$(echo "testUsername")
+testUsername=$(termux-dialog -t "Enter account name" | jq -r ".text")
 
 pin=$(termux-dialog text -t "Enter PIN:" -n -p )
 
